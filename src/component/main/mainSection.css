@@ -1,0 +1,118 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.circles {
+  width: 64px;
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.circles span {
+  width: 16px;
+  height: 16px;
+  background-color: var(--black);
+  border-radius: 8px;
+}
+.circles .circle1 {
+  background-color: var(--orange);
+}
+.circles .circle {
+  border: solid 1px #ADADAD;
+  background-color: transparent;
+}
+
+.mainSwiper .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 8px;
+  border: solid 1px #ADADAD !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+.mainSwiper .swiper-pagination-bullet-active {
+  border: none !important;
+  background-color: var(--orange) !important;
+}
+
+.main {
+  height: 394px;
+  padding: 0 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .leftSide {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .leftSide .headerButton {
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .leftSide h1 {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 43px;
+  font-weight: 700;
+}
+.main .leftSide .buttonsContainer {
+  width: 309px;
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .leftSide .buttonsContainer button {
+  width: 144px;
+  height: 61px;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+.main .leftSide .buttonsContainer .shopButton {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+}
+.main .leftSide .buttonsContainer .viewButton {
+  background-color: transparent;
+  border: solid 2px var(--blue);
+}
+.main .rightSide {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .rightSide .rightSideCircle {
+  width: 120px;
+  height: 120px;
+  margin-left: 250px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background-color: var(--orange);
+}
+.main .rightSide .rightSideCircle p {
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
+}/*# sourceMappingURL=mainSection.css.map */

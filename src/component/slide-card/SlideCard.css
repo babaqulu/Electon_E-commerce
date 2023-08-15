@@ -1,0 +1,124 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.slideSwiper {
+  width: 100% !important;
+}
+@media (max-width: 1500px) {
+  .slideSwiper {
+    margin-bottom: 50px;
+  }
+}
+.slideSwiper .swiper-slide {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+.slideSwiper .swiper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 505px !important;
+}
+.slideSwiper .swiper-pagination {
+  margin-bottom: 20px;
+}
+
+.slideCardWrapper {
+  width: 100%;
+  height: 505px;
+  padding: 62.5px 65px;
+  border-radius: 20px;
+  border: 2px solid #B6B6B6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.slideCardWrapper:hover .rightSide {
+  height: 316px;
+}
+.slideCardWrapper:hover .productButtons {
+  display: flex;
+}
+@media (max-width: 1500px) {
+  .slideCardWrapper {
+    margin: 0;
+  }
+}
+.slideCardWrapper .productButtons {
+  display: none;
+}
+.slideCardWrapper .sidesWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide {
+  width: 345px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSide {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rightSide .productInfo {
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rightSide .productInfo h1 {
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--blue);
+}
+.rightSide .productInfo p {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+.rightSide .productInfo .stars {
+  width: 117px;
+  height: 14px;
+}
+.rightSide .productNums {
+  width: 338px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightSide .productNums span {
+  width: 77px;
+  height: 77px;
+  border-radius: 38px;
+  background-color: #E2F4FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightSide .productNums span p {
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--orange);
+}/*# sourceMappingURL=SlideCard.css.map */

@@ -1,0 +1,178 @@
+
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  padding: 0 5%;
+}
+
+.headerFirst{
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F4F4;
+  p{
+    font-family: Poppins;
+    font-size: 14px;
+    fill: var(--black);
+  }
+  div{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.helpCall{
+  width: 273px;
+  height: 21px;
+}
+.headerIconWrapper{
+  width: 303px;
+  height: 24px;
+
+  .headerLocationIcon{
+    width: 109px;
+    height: 24px;
+    P{
+      width: 65px;
+      height: 21px;
+    }
+  }
+
+  .headerTruckIcon{
+    width: 170px;
+    height: 24px;
+    P{
+      width: 125px;
+      height: 21px;
+    }
+  }
+}
+
+}
+
+.headerSecond{
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+
+  .headerSearch{
+    width: 438px;
+    height: 56px;
+    background-color: #ffff;
+    border-radius: 20px;
+
+    input{
+      width: 306px;
+      height: 56px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding-left: 20px;
+
+      &::placeholder{
+        color: var(--black);
+        font-family: Poppins;
+        font-size: 14px;
+        
+      }
+
+    }//------------INPUT
+
+    button{
+      width: 132px;
+      height: 56px;
+      border:none;
+      border-radius: 20px;
+      background-color: var(--orange);
+      color: white;
+      font-family: Poppins;
+      font-size: 14px;
+
+    }//------------BUTTON
+  }//------------headerSearch
+
+  .iconContainer{
+    width: 326px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .iconName{
+      color: white;
+      font-size: 14px;
+      font-family: Poppins;
+    }//------------iconName
+
+    .user{
+      width: 83px;
+    }//------------user
+
+    .heart{
+      width: 101px;
+    }//------------heart
+
+    .cart{
+      width: 85px;
+    }//------------cart
+
+    .heartCart{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span{
+        width: 15px;
+        height: 15px;
+        border-radius: 7px;
+        background-color: var(--orange);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+          font-size: 9px;
+          color: white;
+          text-align: center;
+          width: 6px;
+          height: 14px;
+        }//------------headerSearch
+    }//------------span
+    }//------------heartCart
+
+    div{
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+  }//------------iconContainer
+}//------------headerSecond
+
+.headerThird{
+
+  height: 71px;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}//------------headerThird

@@ -1,0 +1,35 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cardLongWrapper {
+  width: 30%;
+  height: 147px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 1px var(--blue);
+  border-radius: 20px;
+}
+
+.text h1 {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 600;
+}
+.text p {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 18, 65px;
+  font-weight: 500;
+}/*# sourceMappingURL=cardLong.css.map */

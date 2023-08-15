@@ -1,0 +1,59 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.infoCardsWrapper {
+  width: 650px;
+  height: 369px;
+  border-radius: 20px;
+  border: 2px solid #C8C8C8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.infoCardsWrapper .infoCardsRightSide {
+  width: 265px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoCardsWrapper .infoCardsRightSide .infoCardsDate {
+  width: 147px;
+  height: 41px;
+  border-radius: 20px;
+  border: 2px solid #D4D4D4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoCardsWrapper .infoCardsRightSide .infoCardsDate .infoCardsDateText {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 500;
+}
+.infoCardsWrapper .infoCardsRightSide .infoCardsQuestion {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 600;
+}
+.infoCardsWrapper .infoCardsRightSide .infoCardsParagraph {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 13px;
+}
+.infoCardsWrapper .infoCardsRightSide .infoCardsAuthor {
+  font-family: Poppins;
+  color: var(--blue);
+  font-size: 13px;
+}/*# sourceMappingURL=InfoCards.css.map */

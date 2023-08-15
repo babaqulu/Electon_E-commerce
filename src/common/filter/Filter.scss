@@ -1,0 +1,160 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.filterWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .filterSectionsDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .filterDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .reset{
+    font-family: Poppins;
+    font-size: 15px;
+    color: var(--blue);
+  }
+
+  .filterHeader{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--blue);
+  }
+
+  .filterText{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .filterSubHeader{
+    font-family: Poppins;
+    font-size: 15px;
+    color: var(--blue);
+  }
+
+  .filterLine{
+    width: 100%;
+    height: 1px;
+    background-color: #BDBDBD;
+  }
+
+  .categoriesWrapper{
+    height: 300px;
+
+    .categories{
+      height: 240px;
+
+    }
+
+
+  }
+
+  .avaliabilityWrapper{
+    height: 170px;
+
+    .avaliability{
+      height: 62px;
+    }
+  }
+
+  .productTypeWrapper{
+    height: 150px;
+    
+
+    .productType{
+      height: 62px;
+    }
+  }
+
+  .brandWrapper{
+    height: 128px;
+
+    .brand{
+      height: 62px;
+    }
+  }
+
+    .sizeWrapper{
+    height: 252px;
+
+    .size{
+      height: 156px;
+    }
+  }
+
+  .colorWrapper{
+    height: 129px;
+
+    .color{
+      height: 16px;
+      flex-direction: row;
+
+      .orange{
+        background-color: #EDA415;
+      }
+
+      .red{
+        background-color: #E42424;
+      }
+
+      .blue{
+        background-color: #1B5A7D;
+      }
+
+      .gray{
+        background-color: #ACACAC;
+      }
+
+      .darkgreen{
+        background-color: #1D5F23;
+      }
+
+      .lightblue{
+        background-color: #2E56A3;
+      }
+
+      .purple{
+        background-color: #8131A7;
+      }
+
+      .darkred{
+        background-color: #BC2944;
+      }
+
+      .lightgreen{
+        background-color: #9BC14C;
+      }
+
+
+      .colorsdiv{
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+      }
+    }
+  }
+}

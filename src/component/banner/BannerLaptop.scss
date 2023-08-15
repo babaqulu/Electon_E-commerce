@@ -1,0 +1,68 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background{
+  width: 100%;
+  height: 417px;
+  background: url(../../img/laptopbanner.png);
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 100px;
+
+
+  .infoText{
+    height: 250px;
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .newShop{
+    width: 134px;
+    height: 45px;
+    border-radius: 60px;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .newShopHeader{
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+
+  .bannerHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+      color: #2E8FC5;
+      font-family: Poppins;
+      font-size: 41px;
+      font-weight: 700;
+    }
+    p{
+      color: white;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

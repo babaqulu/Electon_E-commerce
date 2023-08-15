@@ -1,0 +1,125 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.filterWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.filterWrapper .filterSectionsDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.filterWrapper .filterDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.filterWrapper .reset {
+  font-family: Poppins;
+  font-size: 15px;
+  color: var(--blue);
+}
+.filterWrapper .filterHeader {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blue);
+}
+.filterWrapper .filterText {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.filterWrapper .filterSubHeader {
+  font-family: Poppins;
+  font-size: 15px;
+  color: var(--blue);
+}
+.filterWrapper .filterLine {
+  width: 100%;
+  height: 1px;
+  background-color: #BDBDBD;
+}
+.filterWrapper .categoriesWrapper {
+  height: 300px;
+}
+.filterWrapper .categoriesWrapper .categories {
+  height: 240px;
+}
+.filterWrapper .avaliabilityWrapper {
+  height: 170px;
+}
+.filterWrapper .avaliabilityWrapper .avaliability {
+  height: 62px;
+}
+.filterWrapper .productTypeWrapper {
+  height: 150px;
+}
+.filterWrapper .productTypeWrapper .productType {
+  height: 62px;
+}
+.filterWrapper .brandWrapper {
+  height: 128px;
+}
+.filterWrapper .brandWrapper .brand {
+  height: 62px;
+}
+.filterWrapper .sizeWrapper {
+  height: 252px;
+}
+.filterWrapper .sizeWrapper .size {
+  height: 156px;
+}
+.filterWrapper .colorWrapper {
+  height: 129px;
+}
+.filterWrapper .colorWrapper .color {
+  height: 16px;
+  flex-direction: row;
+}
+.filterWrapper .colorWrapper .color .orange {
+  background-color: #EDA415;
+}
+.filterWrapper .colorWrapper .color .red {
+  background-color: #E42424;
+}
+.filterWrapper .colorWrapper .color .blue {
+  background-color: #1B5A7D;
+}
+.filterWrapper .colorWrapper .color .gray {
+  background-color: #ACACAC;
+}
+.filterWrapper .colorWrapper .color .darkgreen {
+  background-color: #1D5F23;
+}
+.filterWrapper .colorWrapper .color .lightblue {
+  background-color: #2E56A3;
+}
+.filterWrapper .colorWrapper .color .purple {
+  background-color: #8131A7;
+}
+.filterWrapper .colorWrapper .color .darkred {
+  background-color: #BC2944;
+}
+.filterWrapper .colorWrapper .color .lightgreen {
+  background-color: #9BC14C;
+}
+.filterWrapper .colorWrapper .color .colorsdiv {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+}/*# sourceMappingURL=Filter.css.map */

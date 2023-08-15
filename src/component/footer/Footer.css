@@ -1,0 +1,162 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footerWrapper {
+  width: 100%;
+  height: 511px;
+  padding: 0 6%;
+  background-color: #E2F4FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.footerWrapper .footerUpperSide {
+  width: 100%;
+  height: 139px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footerWrapper .footerUpperSide .footerSubscribe {
+  font-family: Poppins;
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.footerWrapper .footerUpperSide .footerEmail {
+  width: 388px;
+  height: 63px;
+  background-color: var(--orange);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+.footerWrapper .footerUpperSide .footerEmail input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 364px;
+}
+.footerWrapper .footerUpperSide .footerEmail input::-moz-placeholder {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+.footerWrapper .footerUpperSide .footerEmail input::placeholder {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+.footerWrapper .footerUpperSide .footerEmail button {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerWrapper .footerUpperSide .callUs {
+  width: 197px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerWrapper .footerUpperSide .callUs p {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--blue);
+}
+.footerWrapper .footerBottomSide {
+  width: 100%;
+  height: 247px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerWrapper .footerBottomSide .logoInfo {
+  width: 213px;
+  height: 249px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.footerWrapper .footerBottomSide .logoInfo p {
+  font-family: Poppins;
+  font-size: 16px;
+  color: var(--blue);
+}
+.footerWrapper .footerBottomSide .logoInfo .footerIconsWrapper {
+  width: 250px;
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footerWrapper .footerBottomSide .logoInfo .footerIconsWrapper .footerLine {
+  width: 250px;
+  height: 2px;
+  background-color: #9D9D9D;
+}
+.footerWrapper .footerBottomSide .logoInfo .footerIconsWrapper .footerIconsContainer {
+  width: 146px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerWrapper .footerBottomSide .footerLinkLists {
+  width: 983px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerWrapper .footerBottomSide .footerLinkLists ul {
+  height: 247px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.footerWrapper .footerBottomSide .footerLinkLists ul li {
+  list-style-position: inside;
+  color: #D9D9D9;
+}
+.footerWrapper .footerBottomSide .footerLinkLists ul a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 19px;
+  color: var(--blue);
+}
+.footerWrapper .footerBottomSide .footerLinkLists ul h1 {
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 19px;
+  color: var(--blue);
+}
+.footerWrapper .footerBottomSide .footerLinkLists .footerFindProduct {
+  width: 201px;
+}
+.footerWrapper .footerBottomSide .footerLinkLists .footerGetHelp {
+  width: 172px;
+}
+.footerWrapper .footerBottomSide .footerLinkLists .footerAboutUs {
+  width: 156px;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,38 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox .checkboxInput {
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox .checkboxInput input {
+  margin-right: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #B3D4E5;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+.checkbox .checkboxInput input:checked {
+  background: url(../../img/checked.png);
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}/*# sourceMappingURL=CheckBox.css.map */

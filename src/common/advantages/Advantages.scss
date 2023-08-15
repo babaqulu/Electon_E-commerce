@@ -1,0 +1,38 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.advantages{
+  width: 302px;
+  height: 67px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .advantagesIcon{
+    width: 67px;
+    height: 67px;
+  }
+
+  .advantagesHeader{
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+  .paragraph{
+    font-family: Poppins;
+    font-size: 18px;
+    color: var(--blue);
+  }
+}

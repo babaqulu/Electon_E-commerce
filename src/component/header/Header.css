@@ -1,0 +1,156 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 0 5%;
+}
+
+.headerFirst {
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F4F4;
+}
+.headerFirst p {
+  font-family: Poppins;
+  font-size: 14px;
+  fill: var(--black);
+}
+.headerFirst div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerFirst .helpCall {
+  width: 273px;
+  height: 21px;
+}
+.headerFirst .headerIconWrapper {
+  width: 303px;
+  height: 24px;
+}
+.headerFirst .headerIconWrapper .headerLocationIcon {
+  width: 109px;
+  height: 24px;
+}
+.headerFirst .headerIconWrapper .headerLocationIcon P {
+  width: 65px;
+  height: 21px;
+}
+.headerFirst .headerIconWrapper .headerTruckIcon {
+  width: 170px;
+  height: 24px;
+}
+.headerFirst .headerIconWrapper .headerTruckIcon P {
+  width: 125px;
+  height: 21px;
+}
+
+.headerSecond {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+}
+.headerSecond .headerSearch {
+  width: 438px;
+  height: 56px;
+  background-color: white;
+  border-radius: 20px;
+}
+.headerSecond .headerSearch input {
+  width: 306px;
+  height: 56px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+.headerSecond .headerSearch input::-moz-placeholder {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 14px;
+}
+.headerSecond .headerSearch input::placeholder {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 14px;
+}
+.headerSecond .headerSearch button {
+  width: 132px;
+  height: 56px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--orange);
+  color: white;
+  font-family: Poppins;
+  font-size: 14px;
+}
+.headerSecond .iconContainer {
+  width: 326px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.headerSecond .iconContainer .iconName {
+  color: white;
+  font-size: 14px;
+  font-family: Poppins;
+}
+.headerSecond .iconContainer .user {
+  width: 83px;
+}
+.headerSecond .iconContainer .heart {
+  width: 101px;
+}
+.headerSecond .iconContainer .cart {
+  width: 85px;
+}
+.headerSecond .iconContainer .heartCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerSecond .iconContainer .heartCart span {
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
+  background-color: var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerSecond .iconContainer .heartCart span p {
+  font-size: 9px;
+  color: white;
+  text-align: center;
+  width: 6px;
+  height: 14px;
+}
+.headerSecond .iconContainer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerThird {
+  height: 71px;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=Header.css.map */

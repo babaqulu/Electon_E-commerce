@@ -1,0 +1,232 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home .body {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.home .swiper-slide {
+  width: 100% !important;
+}
+.home .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 8px;
+  border: solid 1px #ADADAD !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+.home .swiper-pagination-bullet-active {
+  border: none !important;
+  background-color: var(--orange) !important;
+}
+.home .longCardsMySwiper {
+  width: 100% !important;
+  margin: 100px 0;
+  padding: 0 30px;
+}
+.home .longCardsMySwiper .swiper-pagination {
+  display: none !important;
+}
+.home .longCardsMySwiper .swiper-button-next {
+  width: 37px !important;
+  height: 37px !important;
+  background: url(../../img/swipeArrowRight.png) !important;
+  content: none !important;
+  position: absolute !important;
+  left: unset !important;
+  bottom: unset !important;
+  top: 50% !important;
+  right: 0 !important;
+}
+.home .longCardsMySwiper .swiper-button-next::after {
+  content: none !important;
+}
+.home .longCardsMySwiper .swiper-button-prev {
+  width: 37px !important;
+  height: 37px !important;
+  font-family: unset !important;
+  background: url(../../img/swipeArrowLeft.png) !important;
+  content: none !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: unset !important;
+  top: 50% !important;
+  right: unset !important;
+  z-index: 10 !important;
+}
+.home .longCardsMySwiper .swiper-button-prev::after {
+  content: none !important;
+}
+.home .longCardsMySwiper .longCards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.home .popularProducts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.home .popularProducts .popularProductsHeader {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 27px;
+  font-weight: 600;
+}
+.home .popularProducts .popularProductsList {
+  width: 595px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.home .popularProducts .popularProductsList li:hover {
+  border: 2px solid var(--blue);
+}
+.home .popularProducts .popularProductsList li {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 139px;
+  height: 45px;
+  background-color: transparent;
+  border-radius: 60px;
+  border: 2px solid #B5B5B5;
+}
+.home .cardsContainerSwiper {
+  width: 100% !important;
+  margin-bottom: 100px;
+}
+.home .cardsContainerSwiper .cardsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin-bottom: 50px;
+}
+.home .slideWide {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+@media (max-width: 1500px) {
+  .home .slideWide {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.home .slideWide .wideWrapper {
+  height: 505px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1500px) {
+  .home .slideWide .wideWrapper {
+    width: 100%;
+    height: 241px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.home .advantagesWrapper {
+  width: 100%;
+  height: 155px;
+  background-color: #E2F4FF;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.home .ppCardMySwiper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.home .ppCardMySwiper .swiper-slide {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-bottom: 100px;
+}
+@media (max-width: 1500px) {
+  .home .ppCardMySwiper .swiper-slide {
+    margin-bottom: 50px;
+  }
+}
+.home .ppCardMySwiper .swiper {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 300px !important;
+}
+.home .swiperInfoCardsContainer .infoCardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.home .infoCardsAppWrapper {
+  height: 470px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.home .infoCardsAppWrapper .latestText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.home .infoCardsAppWrapper .latestText .infoCardsLatest {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--blue);
+}
+.home .infoCardsAppWrapper .latestText .infoCardsViewAll {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--blue);
+}/*# sourceMappingURL=Home.css.map */

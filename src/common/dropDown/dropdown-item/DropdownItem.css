@@ -1,0 +1,35 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dropDownItemWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.dropDownItemWrapper li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropDownItemWrapper li:hover a {
+  color: var(--orange);
+  text-decoration: underline;
+}
+.dropDownItemWrapper li a {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 18px;
+  color: white;
+}/*# sourceMappingURL=DropdownItem.css.map */

@@ -1,0 +1,23 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.logosWrapper{
+  width: 100%;
+  height: 136px;
+  border-radius: 10px;
+  background-color: #E2F4FF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}

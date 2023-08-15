@@ -1,0 +1,110 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cardWrapper {
+  padding: 23px 14px;
+  width: 100%;
+  height: 313px;
+  border: solid 1px var(--blue);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.cardWrapper:hover .addCartWrapper {
+  display: flex;
+}
+.cardWrapper:hover .priceInfo {
+  display: none;
+}
+.cardWrapper .upperSide {
+  width: 220px;
+  height: 169px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+.cardWrapper .upperSide .heartCircle {
+  width: 28px;
+  height: 28px;
+  background-color: #B3D4E5;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+.cardWrapper .upperSide .heroImg {
+  width: 80%;
+}
+.cardWrapper .addCartWrapper {
+  width: 100%;
+  height: 60px;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardWrapper .addCartWrapper button {
+  background-color: #87BCD9;
+  border-radius: 15px;
+  border: none;
+}
+.cardWrapper .addCartWrapper .addCart {
+  width: 204px;
+  height: 60px;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardWrapper .addCartWrapper .addCart .cartCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardWrapper .addCartWrapper .addCart .cartCircle img {
+  width: 17px;
+  height: 17px;
+}
+.cardWrapper .addCartWrapper .eyeButton {
+  width: 70px;
+  height: 60px;
+}
+.cardWrapper h1 {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+}
+.cardWrapper p {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cardWrapper .stars {
+  width: 118px;
+  height: 15px;
+}/*# sourceMappingURL=Card.css.map */

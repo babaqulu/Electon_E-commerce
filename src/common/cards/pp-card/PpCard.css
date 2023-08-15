@@ -1,0 +1,72 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ppCardWrapper {
+  width: 30%;
+  height: 242px;
+  padding: 10px 0;
+  border-radius: 20px;
+  border: 2px solid #BABABA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.ppCardWrapper .ppCardUpperSide {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+}
+.ppCardWrapper .ppCardUpperSide .ppCardProfilePhotoWrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px dashed var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ppCardWrapper .ppCardUpperSide .ppCardProfilePhotoWrapper .ppCardProfilePhotoCircle {
+  width: 87px;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ppCardWrapper .ppCardUpperSide .ppCardProfilePhotoWrapper .ppCardProfilePhoto {
+  background-size: cover;
+}
+.ppCardWrapper .ppCardUpperSide .ppCardName {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--blue);
+}
+.ppCardWrapper .ppCardBottomSide {
+  width: 90%;
+  height: 100px;
+  background-color: #E2F4FF;
+  border-radius: 10px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.ppCardWrapper .ppCardBottomSide .ppCardParagraph {
+  font-family: Poppins;
+  font-size: 13px;
+  color: var(--blue);
+}/*# sourceMappingURL=PpCard.css.map */

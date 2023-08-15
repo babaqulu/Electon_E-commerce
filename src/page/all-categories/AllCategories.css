@@ -1,0 +1,37 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.allCategoriesWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.allCategoriesWrapper .allCategoriesBody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+.allCategoriesWrapper .allCategoriesBody .allCategoriesFilter {
+  width: 25%;
+}
+.allCategoriesWrapper .allCategoriesBody .allCategoriesCardWrapper {
+  width: 70%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  margin-bottom: 50px;
+}/*# sourceMappingURL=AllCategories.css.map */

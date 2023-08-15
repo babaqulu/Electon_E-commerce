@@ -1,0 +1,40 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.checkbox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .checkboxInput{
+    display: flex;
+    justify-content: space-between;
+
+    input{
+      margin-right: 10px;
+      appearance: none;
+      background-color: #B3D4E5;
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+
+      &:checked{
+        background: url(../../img/checked.png);
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+      }
+    }
+  }
+}

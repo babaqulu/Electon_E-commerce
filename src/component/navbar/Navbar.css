@@ -1,0 +1,58 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbarWrapper .freeReturn {
+  color: var(--blue);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navList {
+  width: 508px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navList li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navList li p {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Poppins;
+  text-decoration: none;
+  color: var(--black);
+}
+.navList .listHome {
+  width: 88px;
+}
+.navList .listCatalog {
+  width: 106px;
+}
+.navList .listPages {
+  width: 90px;
+}/*# sourceMappingURL=Navbar.css.map */

@@ -1,0 +1,45 @@
+.addCartWrapper{
+  width: 297px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  button{
+    background-color: #87BCD9;
+    border-radius: 15px;
+    border: none;
+  }
+
+  .addCart{
+    width: 204px;
+    height: 60px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .cartCircle{
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: var(--orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img{
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  .eyeButton{
+    width: 70px;
+    height: 60px;
+  }
+}
