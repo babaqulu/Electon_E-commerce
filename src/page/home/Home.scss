@@ -45,12 +45,12 @@
   }
   
 
+  
   .longCardsMySwiper{
     width: 100% !important;
     margin: 100px 0;
     padding: 0 30px;
     
-
     .swiper-pagination{
       display: none !important;
     }
@@ -114,21 +114,22 @@
     }
 
     .popularProductsList{
-      width: 595px;
+      width: 40%;
       height: 45px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       list-style: none;
 
-      li{
+
+      button{
 
         &:hover{
           border: 2px solid  var(--blue);
         }
       }
 
-      li{
+      button{
         color: var(--blue);
         font-family: Poppins;
         font-size: 16px;
@@ -136,7 +137,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 139px;
+        padding: 0 40px;
         height: 45px;
         background-color: transparent;
         border-radius: 60px;
@@ -148,13 +149,16 @@
   .cardsContainerSwiper{
     width: 100% !important;
     margin-bottom: 100px;
+    padding: 0 !important;
 
       .cardsContainer{
         width: 100%;
-        display: grid;
-        grid-template-rows: repeat(2,1fr) ;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // grid-template-rows: repeat(2,1fr) ;
+        // grid-template-columns: repeat(4,1fr);
+        // grid-gap: 25px;
         margin-bottom: 50px;
 
         // @media (max-width: 1500px ) {
@@ -265,18 +269,10 @@
       height: 300px !important;
     }
   }
+}
 
 
-  .swiperInfoCardsContainer{
 
-    .infoCardsContainer{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 50px;
-    }
-  }
   .infoCardsAppWrapper{
     height: 470px;
     width: 100%;
@@ -285,7 +281,23 @@
     justify-content: space-between;
     margin-bottom: 100px;
 
-
+    .infoCardsMySwiper{
+      width: 100% !important;
+      
+      
+  
+      .swiper{
+        width: 100% !important;
+      }
+  
+      .infoCardsContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+      }
+    }
 
     .latestText{
       display: flex;
@@ -309,5 +321,5 @@
     }
     
   }
-}
+
 

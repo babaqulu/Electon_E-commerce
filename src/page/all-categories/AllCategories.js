@@ -14,7 +14,7 @@ import {
   useParams } from 'react-router-dom';
   import Routes from '../../router/Routes.js'
 
-export default function AllCategories() {
+export default function AllCategories({handleChange,handleClick}) {
   return (
     <div className='allCategoriesWrapper'>
       
@@ -24,7 +24,7 @@ export default function AllCategories() {
 
       <div className='allCategoriesFilter'>
 
-      <Filter />
+      <Filter handleClick={handleClick} handleChange={handleChange}/>
 
       </div>
 

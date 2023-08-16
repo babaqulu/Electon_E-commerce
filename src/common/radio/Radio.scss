@@ -1,0 +1,31 @@
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.color{
+  height: 16px;
+  flex-direction: row;
+
+
+  input{
+    margin-right: 10px;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+
+    &:checked{
+      outline:1px solid var(--black);
+      outline-offset: 4px;
+    }
+  }
+}

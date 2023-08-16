@@ -1,8 +1,9 @@
 import React from 'react'
 import './Filter.css'
 import CheckBox from '../checkBox/CheckBox'
+import Radio from '../radio/Radio'
 
-export default function Filter({comp,header}) {
+export default function Filter({comp,header,handleChange,handleClick}) {
   return (
     <div className='filterWrapper'>
 
@@ -17,12 +18,54 @@ export default function Filter({comp,header}) {
 
 <div className='categories filterSectionsDiv'>
 
-<CheckBox id='allCategories' name='all-categories' labelFor='allCategories' label='All categories' num='10' />
-<CheckBox id='tablet' name='tablet' labelFor='tablet' label='Tablet' num='5' />
-<CheckBox id='laptop' name='laptop' labelFor='laptop' label='Laptop'  num='5' /> 
-<CheckBox id='lheadphones' name='headphones' labelFor='headphones' label='Headphones' num='5' />
-<CheckBox id='console' name='console' labelFor='console' label='Console' num='5' />
-<CheckBox id='other' name='other' labelFor='other' label='Other' num='5' />
+<CheckBox  id='allCategories' name='all-categories' labelFor='allCategories'
+label='All categories'
+num='10' 
+value='all-categories'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='tablet' 
+name='tablet' 
+labelFor='tablet' 
+label='Tablet' 
+num='5' 
+value='tablet'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='laptop' 
+name='laptop' 
+labelFor='laptop' 
+label='Laptop'  
+num='5' 
+value='laptop'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='lheadphones' name='headphones' labelFor='headphones' label='Headphones' 
+num='5' 
+value='headphones'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='console' 
+name='console' 
+labelFor='console' 
+label='Console'
+num='5'
+value='console'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='other' 
+name='other' 
+labelFor='other' 
+label='Other' 
+num='5'
+value='other'
+handleClick={handleClick} handleChange={handleChange} 
+/>
 
 </div>
 
@@ -43,8 +86,20 @@ export default function Filter({comp,header}) {
 
 <div className='avaliability filterSectionsDiv'>
 
-<CheckBox id='in-stock' name='in-stock' labelFor='in-stock' label='In stock' num='5' />
-<CheckBox id='out-of-stock' name='out-of-stock' labelFor='out-of-stock' label='Out of stock' num='0' />
+<CheckBox id='in-stock' name='in-stock' 
+labelFor='in-stock' 
+label='In stock' 
+num='5' 
+value='in-stock'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='out-of-stock' name='out-of-stock' labelFor='out-of-stock' 
+label='Out of stock' 
+num='0' 
+value='out-of-stock'
+handleClick={handleClick} handleChange={handleChange}
+/>
 
 </div>
 
@@ -66,7 +121,12 @@ export default function Filter({comp,header}) {
 
 <div className='productType filterSectionsDiv'>
 
-<CheckBox id='smart-watch' name='smart-watch' labelFor='smart-watch' label='Smart watch' num='5' />
+<CheckBox id='smart-watch' name='smart-watch' labelFor='smart-watch' 
+label='Smart watch' 
+num='5' 
+value='smart-watch'
+handleClick={handleClick} handleChange={handleChange}
+/>
 
 </div>
 
@@ -88,7 +148,12 @@ export default function Filter({comp,header}) {
 
 <div className='brand filterSectionsDiv'>
 
-<CheckBox id='smart-watch' name='smart-watch' labelFor='smart-watch' label='Smart watch' num='5' />
+<CheckBox id='smart-watch' name='smart-watch' labelFor='smart-watch' 
+label='Smart watch' 
+num='5' 
+value='smart-watch'
+handleClick={handleClick} handleChange={handleChange}
+/>
 
 </div>
 
@@ -110,15 +175,15 @@ export default function Filter({comp,header}) {
 
 <div className='color filterSectionsDiv'>
 
-<div className='orange colorsdiv'></div>
-<div className='red colorsdiv'></div>
-<div className='blue colorsdiv'></div>
-<div className='gray colorsdiv'></div>
-<div className='darkgreen colorsdiv'></div>
-<div className='lightblue colorsdiv'></div>
-<div className='purple colorsdiv'></div>
-<div className='darkred colorsdiv'></div>
-<div className='lightgreen colorsdiv'></div>
+<Radio className='orange colorsdiv'/>
+<Radio className='red colorsdiv'/>
+<Radio className='blue colorsdiv'/>
+<Radio className='gray colorsdiv'/>
+<Radio className='darkgreen colorsdiv'/>
+<Radio className='lightblue colorsdiv'/>
+<Radio className='purple colorsdiv'/>
+<Radio className='darkred colorsdiv'/>
+<Radio className='lightgreen colorsdiv'/>
 
 </div>
 
@@ -140,10 +205,38 @@ export default function Filter({comp,header}) {
 
 <div className='size filterSectionsDiv'>
 
-<CheckBox id='mSize' name='mSize' labelFor='mSize' label='M' num='5' />
-<CheckBox id='sSize' name='sSize' labelFor='sSize' label='S' num='5' />
-<CheckBox id='xSize' name='xSize' labelFor='xSize' label='X' num='5' />
-<CheckBox id='xxSize' name='xxSize' labelFor='xxSize' label='XX' num='5' />
+<CheckBox id='mSize' 
+name='mSize' 
+labelFor='mSize' 
+label='M' 
+num='5' 
+value='M'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='sSize' 
+name='sSize' 
+labelFor='sSize' 
+label='S' 
+num='5'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='xSize' 
+name='xSize' 
+labelFor='xSize' 
+label='X' 
+num='5'
+handleClick={handleClick} handleChange={handleChange}
+/>
+
+<CheckBox id='xxSize'
+name='xxSize' 
+labelFor='xxSize' 
+label='XX' 
+num='5' 
+handleClick={handleClick} handleChange={handleChange}
+/>
 
 </div>
 

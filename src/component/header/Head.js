@@ -3,7 +3,7 @@ import React from 'react'
 import './Header.css';
 import Navbar from '../navbar/Navbar'
 
-export default function Header() {
+export default function Header({handleChange,query,handleInputChange}) {
   return (
     <div>
       <header className="App-header">
@@ -38,7 +38,7 @@ export default function Header() {
 
 <div className='headerSearch' >
 
-<input type="search" name="search" placeholder="Serach any things" />
+<input type="search" onChange={handleChange} name="search" placeholder="Serach any things" />
 <button>Search</button>
 
 </div>

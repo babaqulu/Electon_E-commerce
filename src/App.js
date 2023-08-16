@@ -1,12 +1,15 @@
 
 import React from 'react';
-
+import { useState } from 'react'
 import './App.css';
 import Header from './component/header/Head'
 import Footer from './component/footer/Footer'
 import Home from './page/home/Home'
 import AllCategories from './page/all-categories/AllCategories'
 import Card from './common/cards/card/Card';
+
+//Database
+import DataBase from './db/DataList'
 
 import Product from './page/product/Product'
 import {
@@ -29,15 +32,68 @@ import {
 
 function App() {
 
+  const [selectedCategory,setSelectedCategory] = useState(null);
+
+  //--------- Input  FIlter ----------
+  const [query,setQuery] = useState("")
+
+  const handleInputChange = event => {
+    setQuery(event.target.value)
+  }
+
+  const filteredItems = DataBase.filter(data=>data.title.toLowerCase().indexOf(query.toLowerCase() !== -1))
+
+  //--------- Radio  FIlter ----------
+  const handleChange = event => {
+    setSelectedCategory(event.target.value)
+  }
+
+  //--------- Buttons  FIlter ----------
+  const handleClick = event => {
+    setSelectedCategory(event.target.value)
+  }
+
+  function filteredData(products,selected,query){
+    let filteredProducts = products
+
+    //filterin input items
+    if(query){
+      filteredProducts = filteredItems
+    }
+
+    //Selected filter
+    if(selected){
+      filteredProducts = filteredProducts.filter(
+        ({category,color,company,price,title})=>
+        category===selected || 
+        color === selected || 
+        company===selected || 
+        price===selected || 
+        title===selected)
+    }
+
+    return filteredProducts.map(({img,title,price})=>(
+      <Card
+      key={Math.random()}
+      img={img}
+      title={title}
+      price={price}
+      />
+    ))
+  }
+
+  const result = filteredData(DataBase,selectedCategory, query)
+
+
   return (
 
 
     <div className="app">
-      <Header />
+      <Header query={query} handleChange={handleChange} handleInputChange={handleInputChange} />
 
       <Routes>
-        <Router path="/" element={<Home />} />
-        <Router path="/all-categories" element={<AllCategories />}/>
+        <Router path="/" element={<Home handleClick={handleClick} />} />
+        <Router path="/all-categories" element={<AllCategories handleClick={handleClick} handleChange={handleChange} />}/>
         <Router path="/product" element={<Product />} />
       </Routes>
 

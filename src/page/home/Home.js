@@ -106,10 +106,10 @@ export default function Home() {
 
         <ul className='popularProductsList'>
 
-          <li className='popularProductsListFocus'>Cameras</li>
-          <li>Laptops</li>
-          <li>Tablets</li>
-          <li>Mouse</li>
+          <button className='popularProductsListFocus'>Cameras</button>
+          <button>Laptops</button>
+          <button>Tablets</button>
+          <button>Mouse</button>
 
         </ul>
       </div>
@@ -221,14 +221,11 @@ export default function Home() {
           <p className='infoCardsViewAll'>View all</p>
 
         </div>
-
-      <div className='swiperInfoCardsContainer'>
-        
         
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
-        className="mySwiper"
+        className="infoCardsMySwiper"
       >
         <SwiperSlide>
       
@@ -262,7 +259,6 @@ export default function Home() {
 
         </Swiper>
         
-        </div>  
 
 
       </div>

@@ -71,14 +71,15 @@
   height: 56px;
   background-color: white;
   border-radius: 20px;
+  display: flex;
 }
 .headerSecond .headerSearch input {
-  width: 306px;
   height: 56px;
-  background-color: transparent;
   border: none;
   outline: none;
   padding-left: 20px;
+  margin: 0 20px;
+  flex-grow: 2;
 }
 .headerSecond .headerSearch input::-moz-placeholder {
   color: var(--black);
@@ -90,8 +91,13 @@
   font-family: Poppins;
   font-size: 14px;
 }
+.headerSecond .headerSearch input:focus {
+  background: transparent;
+}
+.headerSecond .headerSearch input:active {
+  background: transparent;
+}
 .headerSecond .headerSearch button {
-  width: 132px;
   height: 56px;
   border: none;
   border-radius: 20px;
@@ -99,6 +105,7 @@
   color: white;
   font-family: Poppins;
   font-size: 14px;
+  flex-grow: 2;
 }
 .headerSecond .iconContainer {
   width: 326px;
