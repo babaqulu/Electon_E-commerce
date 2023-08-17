@@ -21,7 +21,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css/navigation';
 
-export default function Home() {
+export default function Home({handleClick}) {
   const pagination = {
     clickable: true,
     dynamicBullets: true,

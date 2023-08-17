@@ -9,7 +9,7 @@ import AllCategories from './page/all-categories/AllCategories'
 import Card from './common/cards/card/Card';
 
 //Database
-import DataBase from './db/DataList'
+import products from './db/DataList'
 
 import Product from './page/product/Product'
 import {
@@ -33,25 +33,24 @@ import {
 function App() {
 
   const [selectedCategory,setSelectedCategory] = useState(null);
+  const [query,setQuery] = useState("");
 
   //--------- Input  FIlter ----------
-  const [query,setQuery] = useState("")
-
   const handleInputChange = event => {
     setQuery(event.target.value)
-  }
+  };
 
-  const filteredItems = DataBase.filter(data=>data.title.toLowerCase().indexOf(query.toLowerCase() !== -1))
+  const filteredItems = products.filter(product=>product.title.toLowerCase().indexOf(query.toLowerCase())) !== -1
 
   //--------- Radio  FIlter ----------
   const handleChange = event => {
     setSelectedCategory(event.target.value)
-  }
+  };
 
   //--------- Buttons  FIlter ----------
   const handleClick = event => {
     setSelectedCategory(event.target.value)
-  }
+  }; 
 
   function filteredData(products,selected,query){
     let filteredProducts = products
@@ -64,12 +63,13 @@ function App() {
     //Selected filter
     if(selected){
       filteredProducts = filteredProducts.filter(
-        ({category,color,company,price,title})=>
-        category===selected || 
-        color === selected || 
-        company===selected || 
-        price===selected || 
-        title===selected)
+        ({product})=>
+        product.category===selected || 
+        product.color === selected || 
+        product.company===selected || 
+        product.price===selected || 
+        product.title===selected
+        );
     }
 
     return filteredProducts.map(({img,title,price})=>(
@@ -82,7 +82,7 @@ function App() {
     ))
   }
 
-  const result = filteredData(DataBase,selectedCategory, query)
+  const result = filteredData(products, selectedCategory, query)
 
 
   return (
@@ -91,10 +91,10 @@ function App() {
     <div className="app">
       <Header query={query} handleChange={handleChange} handleInputChange={handleInputChange} />
 
-      <Routes>
+      <Routes result={result} handleClick={handleClick} handleChange={handleChange} >
         <Router path="/" element={<Home handleClick={handleClick} />} />
-        <Router path="/all-categories" element={<AllCategories handleClick={handleClick} handleChange={handleChange} />}/>
-        <Router path="/product" element={<Product />} />
+        <Router path="/all-categories" element={<AllCategories result={result} handleClick={handleClick} handleChange={handleChange} />}/>
+        <Router path="/product" element={<Product handleChange={handleChange}/>} />
       </Routes>
 
       <Footer />

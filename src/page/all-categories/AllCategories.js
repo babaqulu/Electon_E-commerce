@@ -14,7 +14,7 @@ import {
   useParams } from 'react-router-dom';
   import Routes from '../../router/Routes.js'
 
-export default function AllCategories({handleChange,handleClick}) {
+export default function AllCategories({handleChange,handleClick,result}) {
   return (
     <div className='allCategoriesWrapper'>
       
@@ -30,7 +30,8 @@ export default function AllCategories({handleChange,handleClick}) {
 
       <div className='allCategoriesCardWrapper'>
 
-      <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
+      {result}
+      {/* <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
       <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
       <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
       <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
@@ -44,7 +45,8 @@ export default function AllCategories({handleChange,handleClick}) {
       <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
       <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
       <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
-      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
+      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' /> */}
+
       </div>
 
       </div>

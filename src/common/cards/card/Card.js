@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css';
 import AddCart from '../addCartButton/addCart'
+import products from '../../../db/DataList'
 
 import {
   BrowserRouter as Router,
@@ -15,7 +16,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-export default function Card({link,header,price}) {
+export default function Card({img, title, dataprice}) {
   const pagination = {
     clickable: true,
     dynamicBullets: true,
@@ -47,7 +48,7 @@ export default function Card({link,header,price}) {
 
 <div className='upperSide'>
 
-<img className='heroImg' src={link} />
+<img className='heroImg' src={img} />
 
 <div className='heartCircle'>
   
@@ -67,8 +68,8 @@ export default function Card({link,header,price}) {
 
 <div className='priceInfo'>
 
-  <h1>{header}</h1>
-  <p>{price}</p>
+  <h1>{title}</h1>
+  <p>{dataprice}</p>
 
 <img className='stars' src={require("../../../img/stars.png")} />
 
