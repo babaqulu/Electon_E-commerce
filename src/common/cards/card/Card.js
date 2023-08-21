@@ -16,7 +16,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-export default function Card({img, title, dataprice}) {
+export default function Card({img, title, price}) {
   const pagination = {
     clickable: true,
     dynamicBullets: true,
@@ -33,14 +33,6 @@ export default function Card({img, title, dataprice}) {
     },
   };
   return (
-    
-
-    <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
 
         <Link to='/product'>
 
@@ -69,7 +61,7 @@ export default function Card({img, title, dataprice}) {
 <div className='priceInfo'>
 
   <h1>{title}</h1>
-  <p>{dataprice}</p>
+  <p>{price}</p>
 
 <img className='stars' src={require("../../../img/stars.png")} />
 
@@ -80,10 +72,6 @@ export default function Card({img, title, dataprice}) {
 
         </Link>
 
-
-      </SwiperSlide>   
-  
-      </Swiper>
 
   )
 }

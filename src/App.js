@@ -32,69 +32,18 @@ import {
 
 function App() {
 
-  const [selectedCategory,setSelectedCategory] = useState(null);
-  const [query,setQuery] = useState("");
-
-  //--------- Input  FIlter ----------
-  const handleInputChange = event => {
-    setQuery(event.target.value)
-  };
-
-  const filteredItems = products.filter(product=>product.title.toLowerCase().indexOf(query.toLowerCase())) !== -1
-
-  //--------- Radio  FIlter ----------
-  const handleChange = event => {
-    setSelectedCategory(event.target.value)
-  };
-
-  //--------- Buttons  FIlter ----------
-  const handleClick = event => {
-    setSelectedCategory(event.target.value)
-  }; 
-
-  function filteredData(products,selected,query){
-    let filteredProducts = products
-
-    //filterin input items
-    if(query){
-      filteredProducts = filteredItems
-    }
-
-    //Selected filter
-    if(selected){
-      filteredProducts = filteredProducts.filter(
-        ({product})=>
-        product.category===selected || 
-        product.color === selected || 
-        product.company===selected || 
-        product.price===selected || 
-        product.title===selected
-        );
-    }
-
-    return filteredProducts.map(({img,title,price})=>(
-      <Card
-      key={Math.random()}
-      img={img}
-      title={title}
-      price={price}
-      />
-    ))
-  }
-
-  const result = filteredData(products, selectedCategory, query)
-
+  const [search,setSearch]=useState('')
+  const handleChange = e => setSearch(e.target.value)
 
   return (
 
-
     <div className="app">
-      <Header query={query} handleChange={handleChange} handleInputChange={handleInputChange} />
+      <Header handleChange={handleChange}/>
 
-      <Routes result={result} handleClick={handleClick} handleChange={handleChange} >
-        <Router path="/" element={<Home handleClick={handleClick} />} />
-        <Router path="/all-categories" element={<AllCategories result={result} handleClick={handleClick} handleChange={handleChange} />}/>
-        <Router path="/product" element={<Product handleChange={handleChange}/>} />
+      <Routes search={search} >
+        <Router path="/" element={<Home search={search} />} />
+        <Router path="/all-categories" element={<AllCategories />}/>
+        <Router path="/product" element={<Product />} />
       </Routes>
 
       <Footer />

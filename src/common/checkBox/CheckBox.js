@@ -1,13 +1,12 @@
 import React from 'react'
 import './CheckBox.css'
 
-export default function CheckBox({id,name,labelFor,label,num,value,handleChange,handleClick}) {
+export default function CheckBox({name,labelFor,label,num,value}) {
   return (
     <div className='checkbox'>
       <div className='checkboxInput'>
-      <input onClick={handleClick}
-      onChange={handleChange}
-      type="checkbox" id={id} name={name} />
+      <input 
+      type="checkbox" value={value} name={name} />
     <label htmlFor={labelFor}>{label}</label>
       </div>
 

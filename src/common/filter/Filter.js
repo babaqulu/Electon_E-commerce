@@ -3,7 +3,7 @@ import './Filter.css'
 import CheckBox from '../checkBox/CheckBox'
 import Radio from '../radio/Radio'
 
-export default function Filter({comp,header,handleChange,handleClick}) {
+export default function Filter() {
   return (
     <div className='filterWrapper'>
 
@@ -21,8 +21,7 @@ export default function Filter({comp,header,handleChange,handleClick}) {
 <CheckBox  id='allCategories' name='all-categories' labelFor='allCategories'
 label='All categories'
 num='10' 
-value='all-categories'
-handleClick={handleClick} handleChange={handleChange}
+value=""
 />
 
 <CheckBox id='tablet' 
@@ -30,8 +29,7 @@ name='tablet'
 labelFor='tablet' 
 label='Tablet' 
 num='5' 
-value='tablet'
-handleClick={handleClick} handleChange={handleChange}
+value=""
 />
 
 <CheckBox id='laptop' 
@@ -40,13 +38,14 @@ labelFor='laptop'
 label='Laptop'  
 num='5' 
 value='laptop'
-handleClick={handleClick} handleChange={handleChange}
 />
 
-<CheckBox id='lheadphones' name='headphones' labelFor='headphones' label='Headphones' 
+<CheckBox id='lheadphones'
+name='headphones'
+labelFor='headphones'
+label='Headphones' 
 num='5' 
-value='headphones'
-handleClick={handleClick} handleChange={handleChange}
+value='Headphones'
 />
 
 <CheckBox id='console' 
@@ -55,7 +54,6 @@ labelFor='console'
 label='Console'
 num='5'
 value='console'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 <CheckBox id='other' 
@@ -64,7 +62,6 @@ labelFor='other'
 label='Other' 
 num='5'
 value='other'
-handleClick={handleClick} handleChange={handleChange} 
 />
 
 </div>
@@ -91,14 +88,12 @@ labelFor='in-stock'
 label='In stock' 
 num='5' 
 value='in-stock'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 <CheckBox id='out-of-stock' name='out-of-stock' labelFor='out-of-stock' 
 label='Out of stock' 
 num='0' 
 value='out-of-stock'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 </div>
@@ -125,7 +120,6 @@ handleClick={handleClick} handleChange={handleChange}
 label='Smart watch' 
 num='5' 
 value='smart-watch'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 </div>
@@ -152,7 +146,6 @@ handleClick={handleClick} handleChange={handleChange}
 label='Smart watch' 
 num='5' 
 value='smart-watch'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 </div>
@@ -211,7 +204,6 @@ labelFor='mSize'
 label='M' 
 num='5' 
 value='M'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 <CheckBox id='sSize' 
@@ -219,7 +211,6 @@ name='sSize'
 labelFor='sSize' 
 label='S' 
 num='5'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 <CheckBox id='xSize' 
@@ -227,7 +218,6 @@ name='xSize'
 labelFor='xSize' 
 label='X' 
 num='5'
-handleClick={handleClick} handleChange={handleChange}
 />
 
 <CheckBox id='xxSize'
@@ -235,7 +225,6 @@ name='xxSize'
 labelFor='xxSize' 
 label='XX' 
 num='5' 
-handleClick={handleClick} handleChange={handleChange}
 />
 
 </div>

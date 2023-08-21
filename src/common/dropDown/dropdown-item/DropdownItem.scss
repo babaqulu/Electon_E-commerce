@@ -22,12 +22,12 @@
     justify-content: center;
     align-items: center;
     &:hover{
-      a{
+      p{
         color: var(--orange);
         text-decoration: underline;
       }
     }
-    a{
+    p{
       cursor: pointer;
       text-decoration: none;
       font-family: Poppins;

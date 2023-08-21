@@ -26,4 +26,12 @@
 }
 .allCategoriesWrapper .allCategoriesBody .allCategoriesFilter {
   width: 25%;
+}
+.allCategoriesWrapper .allCategoriesBody .allCategoriesCardWrapper {
+  width: 70%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=AllCategories.css.map */

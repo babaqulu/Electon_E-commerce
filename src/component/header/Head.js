@@ -1,9 +1,11 @@
 
-import React from 'react'
+import React,{useState} from 'react'
 import './Header.css';
 import Navbar from '../navbar/Navbar'
+import {DataList} from '../../db/DataList'
 
-export default function Header({handleChange,query,handleInputChange}) {
+export default function Header({handleChange}) {
+
   return (
     <div>
       <header className="App-header">

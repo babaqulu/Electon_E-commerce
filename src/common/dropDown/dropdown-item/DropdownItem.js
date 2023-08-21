@@ -4,7 +4,7 @@ import './DropdownItem.css'
 export default function DropdownItem({menuItem}) {
   return (
     <div className='dropDownItemWrapper'>
-        <li><a>{menuItem}</a></li>
+        <li><p>{menuItem}</p></li>
     </div>
   )
 }

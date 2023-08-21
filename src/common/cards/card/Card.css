@@ -46,8 +46,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 20px;
 }
 .cardWrapper .upperSide .heroImg {
   width: 80%;

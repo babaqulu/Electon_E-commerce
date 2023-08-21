@@ -19,7 +19,7 @@
 
   .body{
     // width: 100%;
-    padding: 0 6%;
+    padding: 0 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -148,18 +148,21 @@
 
   .cardsContainerSwiper{
     width: 100% !important;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 0 !important;
+
+    .swiper-slide{
+      width: 100% !important;
+      margin-right: 0 !important;
+    }
 
       .cardsContainer{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        // grid-template-rows: repeat(2,1fr) ;
-        // grid-template-columns: repeat(4,1fr);
-        // grid-gap: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
 
         // @media (max-width: 1500px ) {
         //   width: 55%;
@@ -167,6 +170,14 @@
         // grid-template-columns: repeat(2,1fr);
         // margin-right: 0;
         // }
+        
+        .upperCards,.bottomCards{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 50px;
+        }
       }
     
   }

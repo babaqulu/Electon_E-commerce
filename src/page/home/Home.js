@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Home.css'
-import Header from '../../component/header/Head'
 import Main from '../../component/main/MainSection'
 import CardLong from '../../common/cards/long/cardLong'
 import Card from '../../common/cards/card/Card'
@@ -12,7 +11,7 @@ import Advantages from '../../common/advantages/Advantages'
 import PpCard from '../../common/cards/pp-card/PpCard'
 import Logos from '../../component/logos/Logos'
 import InfoCards from '../../common/cards/infoCards/InfoCards'
-import Footer from '../../component/footer/Footer'
+import {DataList} from '../../db/DataList'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -21,7 +20,9 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 import 'swiper/css/navigation';
 
-export default function Home({handleClick}) {
+export default function Home({search}) {
+
+
   const pagination = {
     clickable: true,
     dynamicBullets: true,
@@ -124,31 +125,52 @@ export default function Home({handleClick}) {
       >
         <SwiperSlide>
         <div className='cardsContainer'>  
-        <Card link={require('../../img/fotoaparat.png')} header='Cannon Camera' price='$11,70' /> 
-          <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
-      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
 
-      <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
-      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
+        <div className='upperCards'>
+          
+          {DataList.slice(0,4)
+            .filter((item)=>{
+              return search.toLowerCase() === ''
+              ? item
+              : item.title.toLowerCase().includes(search)
+            })
+            .map((item)=>(
+                    <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+          ))}
+
+        </div>
+
+        <div className='bottomCards'>
+
+        {DataList.slice(4,8).map((item)=>(
+                    <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+          ))}
+
+        </div>
+
       </div>
-
 
         </SwiperSlide>
 
         <SwiperSlide>
         <div className='cardsContainer'>  
-        <Card link={require('../../img/fotoaparat.png')} header='Cannon Camera' price='$11,70' />  
-          <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
-      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
 
-      <Card link={require('../../img/littleheadphone.png')} header='Wireless headphones' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
-      <Card link={require('../../img/desktop.png')} header='Tablet as a laptop' price='$11,70' />
-      <Card link={require('../../img/joystick.png')} header='Play game' price='$11,70' />
+        <div className='upperCards'>
+          
+          {DataList.slice(0,4).map((item)=>(
+                    <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+          ))}
+
+        </div>
+
+        <div className='bottomCards'>
+
+        {DataList.slice(4,8).map((item)=>(
+                    <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+          ))}
+
+        </div>
+
       </div>
 
         </SwiperSlide>
