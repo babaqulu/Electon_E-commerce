@@ -34,15 +34,16 @@ function App() {
 
   const [search,setSearch]=useState('')
   const handleChange = e => setSearch(e.target.value)
+ 
 
   return (
 
     <div className="app">
-      <Header handleChange={handleChange}/>
+      <Header search={search} handleChange={handleChange}/>
 
-      <Routes search={search} >
+      <Routes search={search}>
         <Router path="/" element={<Home search={search} />} />
-        <Router path="/all-categories" element={<AllCategories />}/>
+        <Router path="/all-categories" element={<AllCategories search={search}/>}/>
         <Router path="/product" element={<Product />} />
       </Routes>
 

@@ -4,8 +4,7 @@ import './Header.css';
 import Navbar from '../navbar/Navbar'
 import {DataList} from '../../db/DataList'
 
-export default function Header({handleChange}) {
-
+export default function Header({handleChange,search}) {
   return (
     <div>
       <header className="App-header">

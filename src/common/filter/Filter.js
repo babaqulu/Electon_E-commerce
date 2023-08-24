@@ -1,9 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Filter.css'
 import CheckBox from '../checkBox/CheckBox'
 import Radio from '../radio/Radio'
+import Card from '../../common/cards/card/Card'
+import { DataList } from '../../db/DataList'
 
-export default function Filter() {
+export default function Filter({search,handleCheck}) {
+
+  
+//   {
+//     DataList
+//       .filter((item)=>{
+//         return  item?.category.includes(search)
+// }).map((item)=>(
+//               <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+//     ))
+//   }
+  
+
+
   return (
     <div className='filterWrapper'>
 
@@ -18,29 +33,35 @@ export default function Filter() {
 
 <div className='categories filterSectionsDiv'>
 
-<CheckBox  id='allCategories' name='all-categories' labelFor='allCategories'
+<CheckBox handleCheck={handleCheck} id='allCategories' name='all-categories' labelFor='allCategories'
 label='All categories'
 num='10' 
 value=""
 />
 
-<CheckBox id='tablet' 
+<CheckBox 
+handleCheck={handleCheck}
+id='tablet' 
 name='tablet' 
 labelFor='tablet' 
 label='Tablet' 
 num='5' 
-value=""
+value="Tablet"
 />
 
-<CheckBox id='laptop' 
+<CheckBox 
+handleCheck={handleCheck}
+id='laptop' 
 name='laptop' 
 labelFor='laptop' 
 label='Laptop'  
 num='5' 
-value='laptop'
+value='Laptop'
 />
 
-<CheckBox id='lheadphones'
+<CheckBox 
+handleCheck={handleCheck}
+id='lheadphones'
 name='headphones'
 labelFor='headphones'
 label='Headphones' 
@@ -48,20 +69,24 @@ num='5'
 value='Headphones'
 />
 
-<CheckBox id='console' 
+<CheckBox 
+handleCheck={handleCheck}
+id='console' 
 name='console' 
 labelFor='console' 
 label='Console'
 num='5'
-value='console'
+value='Console'
 />
 
-<CheckBox id='other' 
+<CheckBox 
+handleCheck={handleCheck}
+id='other' 
 name='other' 
 labelFor='other' 
 label='Other' 
 num='5'
-value='other'
+value='Other'
 />
 
 </div>

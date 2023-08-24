@@ -1,7 +1,21 @@
+
+:root {
+  --blue: #003F62;
+  --orange: #EDA415;
+  --black: #292D32;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .addCartWrapper{
-  width: 297px;
+  width: 100%;
   height: 60px;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +27,7 @@
   }
 
   .addCart{
-    width: 204px;
+    width: 60%;
     height: 60px;
     font-family: Poppins;
     font-size: 15px;

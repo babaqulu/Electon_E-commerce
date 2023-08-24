@@ -22,6 +22,7 @@ import 'swiper/css/navigation';
 
 export default function Home({search}) {
 
+  console.log(search)
 
   const pagination = {
     clickable: true,
@@ -116,6 +117,7 @@ export default function Home({search}) {
       </div>
 
       <Swiper
+        search={search}
         slidesPerView={1}
         spaceBetween={10}
         pagination={pagination}
@@ -130,11 +132,11 @@ export default function Home({search}) {
           
           {DataList.slice(0,4)
             .filter((item)=>{
-              return search.toLowerCase() === ''
-              ? item
-              : item.title.toLowerCase().includes(search)
-            })
-            .map((item)=>(
+              return  item?.title?.toLowerCase().includes(search) || 
+              item?.category?.toLowerCase().includes(search) ||
+              item?.company?.toLowerCase().includes(search)
+
+            }).map((item)=>(
                     <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
           ))}
 
@@ -142,9 +144,16 @@ export default function Home({search}) {
 
         <div className='bottomCards'>
 
-        {DataList.slice(4,8).map((item)=>(
+        {DataList.slice(4,8)
+            .filter((item)=>{
+              return  item?.title?.toLowerCase().includes(search) || 
+              item?.category?.toLowerCase().includes(search) ||
+              item?.company?.toLowerCase().includes(search)
+
+            }).map((item)=>(
                     <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
           ))}
+
 
         </div>
 
@@ -157,7 +166,13 @@ export default function Home({search}) {
 
         <div className='upperCards'>
           
-          {DataList.slice(0,4).map((item)=>(
+        {DataList.slice(0,4)
+            .filter((item)=>{
+              return  item?.title?.toLowerCase().includes(search) || 
+              item?.category?.toLowerCase().includes(search) ||
+              item?.company?.toLowerCase().includes(search)
+
+            }).map((item)=>(
                     <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
           ))}
 

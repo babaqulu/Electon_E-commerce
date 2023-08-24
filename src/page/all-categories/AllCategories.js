@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './AllCategories.css';
 import NavigationViewer from '../../common/navigationViewer/NavigationViewer'
 import Card from '../../common/cards/card/Card'
 import Filter from '../../common/filter/Filter'
 import CheckBox from '../../common/checkBox/CheckBox';
 import BannerLaptop from '../../component/banner/BannerLaptop'
-import products from '../../db/DataList.js'
+import {DataList} from '../../db/DataList'
 
 import {
   BrowserRouter as Router,
@@ -15,7 +15,14 @@ import {
   useParams } from 'react-router-dom';
   import Routes from '../../router/Routes.js'
 
-export default function AllCategories() {
+export default function AllCategories({search}) {
+
+  const [clicked,setClicked]=useState(true)
+
+  const handleCheck = e =>setClicked(e.target.value)  
+  console.log(setClicked);
+  
+
   return (
     <div className='allCategoriesWrapper'>
       
@@ -25,27 +32,22 @@ export default function AllCategories() {
 
       <div className='allCategoriesFilter'>
 
-      <Filter/>
+      <Filter search={search} handleCheck={handleCheck}/>
 
       </div>
 
       <div className='allCategoriesCardWrapper'>
 
-      <Card img={require('../../img/fotoaparat.png')} title='Cannon Camera' price='$11,70' />  
-        <Card img={require('../../img/littleheadphone.png')} title='Wireless headphones' price='$11,70' />
-      <Card img={require('../../img/joystick.png')} title='Play game' price='$11,70' />
-      <Card img={require('../../img/desktop.png')} title='Tablet as a laptop' price='$11,70' />
-      <Card img={require('../../img/littleheadphone.png')} title='Wireless headphones' price='$11,70' />
-      <Card img={require('../../img/joystick.png')} title='Play game' price='$11,70' />
-      <Card img={require('../../img/desktop.png')} title='Tablet as a laptop' price='$11,70' />
-      <Card img={require('../../img/joystick.png')} title='Play game' price='$11,70' />
-      <Card img={require('../../img/fotoaparat.png')} title='Cannon Camera' price='$11,70' />  
-        <Card img={require('../../img/littleheadphone.png')} title='Wireless headphones' price='$11,70' />
-      <Card img={require('../../img/joystick.png')} title='Play game' price='$11,70' />
-      <Card img={require('../../img/desktop.png')} title='Tablet as a laptop' price='$11,70' />
-      <Card img={require('../../img/littleheadphone.png')} title='Wireless headphones' price='$11,70' />
-      <Card img={require('../../img/joystick.png')} title='Play game' price='$11,70' />
-      <Card img={require('../../img/desktop.png')} title='Tablet as a laptop' price='$11,70' />
+      {DataList
+            .filter((item)=>{
+              return  item?.title?.toLowerCase().includes(search) || 
+              item?.category?.toLowerCase().includes(search) ||
+              item?.category?.toLowerCase().includes(clicked) ||
+              item?.company?.toLowerCase().includes(search)
+
+            }).map((item)=>(
+                    <Card key={item.id} img={item.img} title={item.title} price={item.price} /> 
+          ))}
 
       </div>
 

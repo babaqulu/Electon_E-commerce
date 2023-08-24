@@ -50,13 +50,7 @@ export default function Card({img, title, price}) {
 
 </div>
 
-
-<div className='addCartWrapper'>
-
-    <AddCart />
-
-    </div>
-
+    <AddCart className='addCartWrapperComp' />
 
 <div className='priceInfo'>
 
